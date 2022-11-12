@@ -10,14 +10,21 @@
   text-align: start;
   padding: 8px 8px;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   border-radius: 10px;
+  margin: 0px 4px;
 }
 
 /* Change the color of links on hover */
 .ho__ver ul li a:hover {
   background-color: rgba(163, 151, 243, 0.622);
   color: rgb(0, 0, 0);
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
