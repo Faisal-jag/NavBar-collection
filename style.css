@@ -1,8 +1,8 @@
 /* Place the navbar at the bottom of the page, and make it stick */
-.nav__bar {
+/* .nav__bar {
     display: flex;
     justify-content: center;
-}
+} */
 
 /* Style the links inside the navigation bar */
 .nav__bar a {
