@@ -6,7 +6,10 @@
 }
 
 body {
-	background: #d2dce1;
+  /* margin: 0px;
+  padding: 0px; */
+  background-color: #ebebeb;
+  background-image: url("https://www.transparenttextures.com/patterns/black-thread-light.png");
 }
 
 nav {
@@ -16,22 +19,22 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	font-family: "Source Sans Pro";
+	/* font-family: "Source Sans Pro"; */
 	position: fixed;
-	font-size: 1.8vh;
-	padding: 0 5vh;
+	font-size: 2.8vh;
+	padding: 0 5vh 0 1vh;
 	transition: 0.3s all;
 	z-index: 10;
 }
 nav.hide {
 	transform: translateY(-6.7vh);
 }
-nav > a > img {
-	background: #fff;
+.openbtn {
+  color: #fff;
 	object-fit: contain;
 	width: 5vh;
 	height: 5vh;
-	border-radius: 50%;
+  cursor: pointer;
 }
 
 nav > p {
@@ -40,6 +43,8 @@ nav > p {
 
 nav > ul {
 	display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 nav > ul > li {
@@ -65,7 +70,7 @@ nav > ul > li > a:hover {
 	color: #00aaff;
 }
 
-nav > ul > li > a.active {
+/* nav > ul > li > a.active {
 	opacity: 1;
 	background: hsl(210, 100%, 60%);
 	padding: 1vh 2vh;
@@ -73,13 +78,13 @@ nav > ul > li > a.active {
 	font-weight: bold;
 	border-radius: 1vh;
 	border-bottom: 0.4vh solid hsl(210, 60%, 45%);
-}
+} */
 
 @media screen and (max-width: 768px) {
 	nav {
-		font-size: 3.5vw;
-		height: 10vw;
-		padding: 0 5vw;
+		font-size: 3.8vw;
+		height: 15vw;
+		padding: 0 5vw 0 1vw;
 	}
 
 	nav.hide {
@@ -87,13 +92,14 @@ nav > ul > li > a.active {
 		transform: none;
 	}
 
-	nav.hide > a > img,
+	.openbtn,
 	nav.hide > p {
 		transition: 0.3s all;
 		transform: translateY(-10vw);
 	}
 
-	nav > a > img {
+	.openbtn{
+    color: #fff;
 		width: 8vw;
 		height: 8vw;
 	}
@@ -111,7 +117,7 @@ nav > ul > li > a.active {
 		left: 0;
 		background: #22262a;
 		justify-content: space-evenly;
-		height: 12vw;
+		height: 15vw;
 		align-items: center;
 	}
 
@@ -123,16 +129,12 @@ nav > ul > li > a.active {
 		border-radius: 2vw;
 		padding: 1.5vw 3vw;
 	}
-
-  
-
-
 }
 
 
 
 
-.dropbtn {
+.drop_up_btn {
   /* background-color: #3498DB; */
   /* color: white;
   border: none; */
@@ -142,14 +144,14 @@ nav > ul > li > a.active {
   background-color: inherit;
 }
 
-.dropup {
+.drop_up {
   /* position: relative;
   display: inline-block; */
   float: right;
   overflow: hidden;
 }
 
-.dropup-content {
+.drop_up_content {
   /* display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -165,7 +167,7 @@ nav > ul > li > a.active {
   z-index: 1;
 }
 
-.dropup-content a {
+.drop_up_content a {
   /* color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -173,7 +175,7 @@ nav > ul > li > a.active {
 
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 12px 18px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -181,11 +183,11 @@ nav > ul > li > a.active {
 
 
 
-.dropup:hover .dropup-content {
+.drop_up:hover .drop_up_content {
   display: block;
 }
 
-.dropup-content a:hover{
+.drop_up_content a:hover{
   background-color: #ddd;
 }
 
@@ -195,7 +197,7 @@ nav > ul > li > a.active {
 
 
 
-.drop_btn {
+.drop_down_btn {
   /* background-color: #3498DB; */
   color: white;
   border: none;
@@ -218,7 +220,7 @@ nav > ul > li > a.active {
 
 .drop_down_content a {
   color: black;
-  padding: 12px 16px;
+  padding: 12px 18px;
   text-decoration: none;
   display: block;
 }
@@ -238,3 +240,195 @@ nav > ul > li > a.active {
   display: inline;
   margin-left: 0.5vh;
 }
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.77);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 16px;
+  margin-left: 50px;
+  margin-top: 6px;
+
+  cursor: pointer;
+  color: #fff;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+.openbtn:hover, .sidebar .closebtn:hover {
+  background-color: #fff;
+  color: #000000;
+  border-radius: 10%;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+.sbdd, .sbdd a{
+  font-size: 14px;
+
+}
+.sbdd a:hover{
+font-size: 15px;
+color: black;
+background-color: #ddd;
+font-weight: bold;
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+
+
+#quran, #hadith{
+  background-color: rgba(76, 0, 130, 0.4);
+  color: white;
+}
+#quran:hover{
+  background-color: rgba(76, 0, 130, 0.8);
+}
+#hadith:hover{
+  background-color: rgba(76, 0, 130, 0.8);
+}
+
+
+
+
+#playlistlink a{
+  text-decoration: underline;
+  padding: 4px;
+  border-radius: 10px;
+}
+#playlistlink a:hover{
+  background-color: lightgreen;
+}
+
+
+/* css for courses.html */
+
+.course-section h1{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  padding-top: 20px;
+  text-decoration: underline 3px;
+  
+}
+
+.course-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.items{
+  margin: 10px 10px;
+  /* padding: 10px 10px; */
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 3px;
+  background-color: #9f0d00;
+  width: 150px;
+}
+
+.items:hover{
+  border: 4px solid green;
+  border-radius: 3px;
+}
+
+
+/* css for pdf.html start*/
+/* css for pdf.html end*/
+
+
+
+/* scroll back to top css start */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgba(78, 184, 222, 0.4); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  /* padding: 8px; Some padding */
+  border-radius: 10px; /* Rounded corners */
+  /* font-size: 18px; Increase font size */
+}
+
+#myBtn:hover {
+  background-color: rgba(78, 184, 222,0.8); /* Add a dark-grey background on hover */
+}
+/* scroll back to top css end */
+
