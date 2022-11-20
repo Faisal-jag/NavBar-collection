@@ -18,9 +18,11 @@ function myFunction(x) {
    document.getElementById("dd").className = "drop_down ";
    document.getElementById("ddc").className = "drop_down_content";
    document.getElementById("ddb").className = "drop_btn";
+   document.getElementById("iconlabel").className = "icon_label";
   } else {
     document.getElementById("dd").className = "dropup";
     document.getElementById("ddc").className = "dropup-content";
     document.getElementById("ddb").className = "dropbtn";
+    document.getElementById("iconlabel").className = "iconlabel";
   }
 }

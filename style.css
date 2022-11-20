@@ -229,3 +229,12 @@ nav > ul > li > a.active {
 .drop_down_content a:hover{
   background-color: #ddd;
 }
+
+.icon_label{
+  display: block;
+  /* margin-left: 3vh; */
+}
+.iconlabel{
+  display: inline;
+  margin-left: 0.5vh;
+}
